@@ -8,11 +8,10 @@
     --cor-sombra: #b4c2e3;
     --cor-fonte: #04040c;
     --cor-fundo-menu: #434AF9;
-    --cor-fundo-menu-selecionado: #5E64F9; 
-    /* #1013f1; */
+    --cor-fundo-menu-selecionado: #5E64F9;
+    --cor-header-menu: #3439cf;
     --cor-fonte-menu: #fff;
     --cor-fundo-icone-menu: #fcfcfe;
-    /* f5f5f5 */
     --cor-linha: #000;
     --cor-cinza-escuro: #4f4750;
     --cor-laranja: #f16c1b;
@@ -89,7 +88,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: var(--cor-laranja);
+    background: var(--cor-header-menu);
 }
 
 #sidebar ul.components {
@@ -189,8 +188,9 @@ a[data-toggle="collapse"] {
 }
 
 #quadro-noticias {
-    background-color: red;
+    background-color: gray;
 }
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
