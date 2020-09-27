@@ -1,6 +1,3 @@
-/*
-    DEMO STYLE
-*/
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 :root {
@@ -11,6 +8,7 @@
     --cor-fundo-menu-selecionado: #5E64F9;
     --cor-header-menu: #3439cf;
     --cor-fonte-menu: #fff;
+    --cor-fonte-menu-selecionado: #aeb3bd;
     --cor-fundo-icone-menu: #fcfcfe;
     --cor-linha: #000;
     --cor-cinza-escuro: #4f4750;
@@ -96,12 +94,8 @@ a:focus {
     border-bottom: 1px solid var(--cor-linha);
 }
 
-#sidebar ul p {
+nav ul li a {
     color: var(--cor-fonte-menu);
-    padding: 10px;
-}
-
-#sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
@@ -110,11 +104,6 @@ a:focus {
 #sidebar ul li a:hover {
     color: var(--cor-fonte-menu);
     background: var(--cor-fundo-menu-selecionado);
-}
-
-#sidebar ul li.active>a {
-    color: red;
-    background: red
 }
 
 /* 
@@ -189,6 +178,10 @@ a[data-toggle="collapse"] {
 
 #quadro-noticias {
     background-color: gray;
+}
+
+#active-item {
+    color: var(--cor-fonte-menu-selecionado);
 }
 
 /* ---------------------------------------------------
