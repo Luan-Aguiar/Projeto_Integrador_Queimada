@@ -58,6 +58,28 @@ a:focus {
     margin: 40px 0;
 }
 
+/*----------------------------------------------------
+    CENTER CONTENT STYLE
+------------------------------------------------------ */
+
+.imagem{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.imagem img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:black solid 2px;
+}
+
+.dados{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
