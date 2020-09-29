@@ -165,7 +165,14 @@ a.article:hover {
 img {
   display: block;
   width: 100%;
-  height: 100%;
+}
+
+.card-header{
+  background-color: transparent;
+}
+
+.cartoes{
+  margin: 10px 0px;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
