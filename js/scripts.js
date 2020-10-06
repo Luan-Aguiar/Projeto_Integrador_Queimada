@@ -15,10 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function buscaNoticias() {
-    // let url = 'http://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?source=google-news-br&language=pt&sortBy=publishedAt&qInTitle=queimada%20OR%20queimadas%20OR%20incendio%20OR%20incendios%20OR%20fumaca%20OR%20fumacas&apiKey=d441a0feb1bb4e8087336752c5ed55ac';
-    // let url = 'https://api.currentsapi.services/v1/search?language=pt&keywords=queimada&apiKey=Dt09MmnO1Lau3_v_akSxYqOtBxjMUUSkhJb43CYMzZZPwEMv';
-    // fetch(url).then(response => response.json())
-    // fetch("https://newscatcher.p.rapidapi.com/v1/search_free?page_size=20&media=True&lang=pt&q=queimadas", {
     fetch("https://newscatcher.p.rapidapi.com/v1/search?media=True&search_in=title&sort_by=date&lang=pt&country=br&page=1&q=queimadas", {
             "method": "GET",
             "headers": {
@@ -31,14 +27,6 @@ function buscaNoticias() {
                 noticias = (dados);
                 alternadorNoticias();
             })
-            // console.log('dados ' + dados);
-            // let abc = JSON.parse(dados);
-            // console.log('dados ' + abc.page);
-            // console.log('dados ' + JSON.stringify(dados));
-            // console.log('dados ' + JSON.parse(dados));
-            // if (noticias.total_hits < 20) {
-            //     maximoNoticias = noticias.total_hits;
-            // }
         })
         .catch(error => {
             console.log('Erro buscando notícias: ' + error);
@@ -55,16 +43,19 @@ function exibeNoticia(numeroNoticia) {
     let imagem = document.querySelector('#img-noticia img');
     quadro.setAttribute('style', 'display:block;');
     try {
+        console.log('data: ', noticias.articles[numeroNoticia].published_date);
         titulo.innerText = noticias.articles[numeroNoticia].title;
         titulo.href = noticias.articles[numeroNoticia].link;
         fonte.innerText = noticias.articles[numeroNoticia].clean_url;
         data.innerText = new Date(noticias.articles[numeroNoticia].published_date).toLocaleString();
         if (noticias.articles[numeroNoticia].media != null) {
             imagem.src = (noticias.articles[numeroNoticia].media).replace('httpss://', 'https://');
-            imagem.setAttribute('style', 'display:block;');
+            imagem.classList.remove("img-nao-existe");
+            imagem.classList.add("img-existe");
         } else {
             imagem.src = '';
-            imagem.setAttribute('style', 'display:none;');
+            imagem.classList.remove("img-existe");
+            imagem.classList.add("img-nao-existe");
         }
     } catch (error) {
         ocultaNoticias();
