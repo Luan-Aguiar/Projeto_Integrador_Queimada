@@ -1,19 +1,19 @@
 @import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
 
 :root {
-  --cor-fundo: #f2f3f9;
-  --cor-sombra: #b4c2e3;
-  --cor-fonte: #04040c;
-  --cor-fundo-menu: #434af9;
-  --cor-fundo-menu-selecionado: #5e64f9;
-  --cor-header-menu: #3439cf;
-  --cor-fonte-menu: #fff;
-  --cor-fonte-menu-selecionado: #aeb3bd;
-  --cor-fundo-icone-menu: #fcfcfe;
-  --cor-fundo-noticias: #ffdba4;
-  --cor-linha: #000;
-  --cor-cinza-escuro: #4f4750;
-  --cor-laranja: #f16c1b;
+    --cor-fundo: #f2f3f9;
+    --cor-sombra: #b4c2e3;
+    --cor-fonte: #04040c;
+    --cor-fundo-menu: #434AF9;
+    --cor-fundo-menu-selecionado: #5E64F9;
+    --cor-header-menu: #3439cf;
+    --cor-fonte-menu: #fff;
+    --cor-fonte-menu-selecionado: #aeb3bd;
+    --cor-fundo-icone-menu: #fcfcfe;
+    --cor-fundo-noticias: #ffdba4;
+    --cor-linha: #000;
+    --cor-cinza-escuro: #4f4750;
+    --cor-laranja: #f16c1b;
 }
 
 body {
@@ -102,7 +102,7 @@ a:focus {
   max-width: 250px;
   background: var(--cor-fundo-menu);
   color: var(--cor-fonte-menu);
-  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+  transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
   transform-origin: bottom left;
 }
 
@@ -156,7 +156,7 @@ nav ul li a {
   margin: 0 auto;
   display: block;
   background: var(--cor-fonte);
-  transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
   transition-delay: 0.2s;
 }
 
@@ -239,43 +239,43 @@ footer div img {
 ----------------------------------------------------- */
 @media (max-width: 425px) {
   #img-noticia img {
-    display: none;
+      display: none;
   }
 }
 
 @media (max-width: 768px) {
   #sidebar {
-    margin-left: -250px;
-    transform: rotateY(90deg);
+      margin-left: -250px;
+      transform: rotateY(90deg);
   }
 
   #sidebar.active {
-    margin-left: 0;
-    transform: none;
+      margin-left: 0;
+      transform: none;
   }
 
   #sidebarCollapse span:first-of-type,
   #sidebarCollapse span:nth-of-type(2),
   #sidebarCollapse span:last-of-type {
-    transform: none;
-    opacity: 1;
-    margin: 5px auto;
+      transform: none;
+      opacity: 1;
+      margin: 5px auto;
   }
 
   #sidebarCollapse.active span {
-    margin: 0 auto;
+      margin: 0 auto;
   }
 
   #sidebarCollapse.active span:first-of-type {
-    transform: rotate(45deg) translate(2px, 2px);
+      transform: rotate(45deg) translate(2px, 2px);
   }
 
   #sidebarCollapse.active span:nth-of-type(2) {
-    opacity: 0;
+      opacity: 0;
   }
 
   #sidebarCollapse.active span:last-of-type {
-    transform: rotate(-45deg) translate(1px, -1px);
+      transform: rotate(-45deg) translate(1px, -1px);
   }
 }
 

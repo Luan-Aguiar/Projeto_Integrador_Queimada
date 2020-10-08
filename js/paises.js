@@ -1,7 +1,9 @@
 // JQuery para uso do Bootstrap, menu sidebar
-$('#sidebarCollapse').on('click', function () {
-  $('#sidebar').toggleClass('active');
-  $(this).toggleClass('active');
+$(document).ready(function () {
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+    $(this).toggleClass('active');
+  });
 });
 
 // Obter dados da API e enviar para as funções de atualização da DOM
@@ -155,7 +157,6 @@ function refreshCardCoutryMin(countryMinFires) {
 populateCountries();
 
 // Função para renderizar o gráfico de pizza
-
 function refreshCardPieChart(arrayPie) {
   var chart = JSC.chart('chartDiv', {
     debug: false,
@@ -191,12 +192,15 @@ function refreshCardPieChart(arrayPie) {
     ],
   });
 
+  //Funções não necessaria agora.
+  //Maneira de visualizar
   // function setMode(val) {
   // chart.options({
   //   defaultPoint: { label: { placement: val } }
   // });
   // }
 
+  //Escolher se quer esconder textos ou não
   // function setAutoHide(val) {
   // chart.options({
   //   defaultPoint: { label: { autoHide: val } }
