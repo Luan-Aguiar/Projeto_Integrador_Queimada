@@ -9,6 +9,7 @@ $(document).ready(function () {
     });
 });
 
+
 window.addEventListener('DOMContentLoaded', () => {
     buscaMapa();
     buscaNoticias();
