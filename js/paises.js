@@ -159,7 +159,7 @@ populateCountries();
 function refreshCardPieChart(arrayPie) {
   var chart = JSC.chart('chartDiv', {
     debug: false,
-    legend_position: 'inside left bottom',
+    legend_position: 'inside  bottom',
     defaultSeries: {
       type: 'pie',
       pointSelection: true,
@@ -167,7 +167,7 @@ function refreshCardPieChart(arrayPie) {
     defaultPoint_label: {
       text: '<b>%name</b>',
       placement: 'auto',
-      autoHide: false,
+      autoHide: true,
     },
     toolbar_items: {
       // Mode: {
