@@ -1,6 +1,10 @@
-/*
- *  Essa função obtem dados da API do INPE
- */
+// JQuery para uso do Bootstrap, menu sidebar
+$('#sidebarCollapse').on('click', function () {
+  $('#sidebar').toggleClass('active');
+  $(this).toggleClass('active');
+});
+
+// Obter dados da API e enviar para as funções de atualização da DOM
 async function populateCountries() {
   const url =
     'http://queimadas.dgi.inpe.br/queimadas/dados-abertos/api/focos/count';
@@ -93,35 +97,109 @@ async function populateCountries() {
     valueChartJS.push(key);
   });
 
-  receiveDataForChartJS(result);
+  // -----------------------------------------------------------------------------
+
+  let arrayPie = [];
+  for (let key in result) {
+    if (result.hasOwnProperty(key)) {
+      arrayPie.push({ name: key, y: result[key] });
+    }
+  }
+  arrayPie.sort(function (a, b) {
+    return b.y - a.y;
+  });
+
+  refreshCardPieChart(arrayPie);
 }
 
 // Função para atualizar o card com total de incêndios
 function refreshCardTotalFires(totalFires) {
-  const cardTotalFires = document.getElementById('totalFires');
-  cardTotalFires.innerHTML = `${totalFires}`;
+  const divCards = document.getElementById('cards');
+  divCards.innerHTML += `
+    <div class="card text-white bg-danger">
+      <div class="card-header">Total</div>
+      <div class="card-body d-flex justify-content-between align-center">
+        <h3 class="align-text-bottom" id="totalFires">${totalFires}</h3>
+      </div>
+    </div>
+`;
 }
 
 // Função para atualizar o card com o país da maior quantidade de incêndios
 function refreshCardCoutryMax(countryMaxFires) {
-  const cardCountryMaxFires = document.getElementById('countryMaxFires');
-  cardCountryMaxFires.innerHTML = `${countryMaxFires}`;
+  const divCards = document.getElementById('cards');
+  divCards.innerHTML += `
+    <div class="card text-white bg-warning mt-3">
+      <div class="card-header">Maior índice</div>
+      <div class="card-body d-flex justify-content-between align-center">
+        <h3 class="align-text-bottom" id="countryMaxFires">${countryMaxFires}</h3>
+      </div>
+    </div>
+  `;
 }
 
 // Função para atualizar o card com o país da menor quantidade de incêndios
 function refreshCardCoutryMin(countryMinFires) {
-  const cardCountryMinFires = document.getElementById('countryMinFires');
-  cardCountryMinFires.innerHTML = `${countryMinFires}`;
+  const divCards = document.getElementById('cards');
+  divCards.innerHTML += `
+    <div class="card text-white bg-success mt-3">
+      <div class="card-header">Menor índice</div>
+      <div class="card-body d-flex justify-content-between align-center">
+        <h3 class="align-text-bottom" id="countryMinFires">${countryMinFires}</h3>
+      </div>
+    </div>
+  `;
 }
 
 // Chamando a função que obtém os dados da API e renderiza
 populateCountries();
 
-// JQuery of the Bootstrap, to sidebar menu open and close.
+// Função para renderizar o gráfico de pizza
 
-$('#sidebarCollapse').on('click', function () {
-  $('#sidebar').toggleClass('active');
-  $(this).toggleClass('active');
-});
+function refreshCardPieChart(arrayPie) {
+  var chart = JSC.chart('chartDiv', {
+    debug: false,
+    legend_position: 'inside left bottom',
+    defaultSeries: {
+      type: 'pie',
+      pointSelection: true,
+    },
+    defaultPoint_label: {
+      text: '<b>%name</b>',
+      placement: 'auto',
+      autoHide: false,
+    },
+    toolbar_items: {
+      // Mode: {
+      //   margin: 10,
+      //   type: 'select',
+      //   events_change: setMode,
+      //   items: 'enum_placement'
+      // },
+      // 'Auto Hide': {
+      //   type: 'checkbox',
+      //   events_change: setAutoHide
+      // }
+    },
+    title_label_text: 'QUEIMADAS AMÉRICA DO SUL',
+    yAxis: { label_text: 'Quantidade', formatString: 'n' },
+    series: [
+      {
+        name: 'Países',
+        points: arrayPie,
+      },
+    ],
+  });
 
+  // function setMode(val) {
+  // chart.options({
+  //   defaultPoint: { label: { placement: val } }
+  // });
+  // }
 
+  // function setAutoHide(val) {
+  // chart.options({
+  //   defaultPoint: { label: { autoHide: val } }
+  // });
+  // }
+}

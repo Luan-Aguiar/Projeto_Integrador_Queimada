@@ -28,7 +28,7 @@
           <a href="index.html">Brasil</a>
         </li>
         <li>
-          <a href="#" id="active-item">Estados</a>
+          <a href="#" id="active-item">América do Sul</a>
         </li>
         <li>
           <a href="#">Informações</a>
@@ -39,95 +39,37 @@
       </ul>
     </nav>
 
-    <!-- Page Content  -->
+    <!-- Content  -->
 
     <div id="content">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid container-navbar-btn col-sm d-flex justify-content-between">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+        <div>
           <button type="button" id="sidebarCollapse" class="navbar-btn">
             <span></span>
             <span></span>
             <span></span>
           </button>
         </div>
-        <span id="titulo-pagina" class="mr-3">Queimadas América do Sul</span>
-
+        <div id="titulo-pagina" class="mx-auto">Monitoramento América do Sul</div>
       </nav>
 
       <div id="table" class="row">
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-lg-9 col-sm-12">
           <table class="table table-striped" id="tableOfCountries" style="text-align: center;">
           </table>
         </div>
 
-        <div id="cards" class="col">
-          <div class="card text-white bg-danger">
-            <div class="card-header">Total America do Sul</div>
-            <div class="card-body d-flex justify-content-between align-center">
-              <h3 class="align-text-bottom" id="totalFires"></h3>
-            </div>
-          </div>
-
-          <div class="card text-white bg-warning mt-3">
-            <div class="card-header">País com maior índice</div>
-            <div class="card-body d-flex justify-content-between align-center">
-              <h3 class="align-text-bottom" id="countryMaxFires"></h3>
-            </div>
-          </div>
-
-          <div class="card text-white bg-success mt-3">
-            <div class="card-header">País com menor índice</div>
-            <div class="card-body d-flex justify-content-between align-center">
-              <h3 class="align-text-bottom" id="countryMinFires"></h3>
-            </div>
-          </div>
-        </div>
+        <div id="cards" class="col-12 col-lg-3 col-sm-12"></div>
 
       </div>
 
-           <!--      <div class="row">
-            <div class="card col-12 col-lg-6 cartoes">
-              <div class="card-header">
-                <ul class="nav nav-pills card-header-pills">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">48 Horas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Mês</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Ano</a>
-                  </li>
-                </ul>
-              </div>
-              <img class="card-img" src="img/Captura de tela de 2020-09-29 14-54-39.png" alt="Mapa do Brasil com numero de queimadas">
-            </div>
-    
-            <div class="card col-12 col-lg-6 cartoes">
-              <div class="card-header">
-                <ul class="nav nav-pills card-header-pills">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">48 Horas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Mês</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Ano</a>
-                  </li>
-                </ul>
-              </div>
-              <img class="card-img" src="img/Captura de tela de 2020-09-29 14-54-05.png" alt="Gráfico do número de queimadas dos estados" id="grafico">
-            </div>
-    
-          </div> -->
-
+      <div class="row">
+        <div class="card col-12 col-lg-6 mx-auto cartoes">
+          <div id="chartDiv" style="height: 370px;">
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-
-   
   </div>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -141,6 +83,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!-- JSCharting  -->
+  <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+  <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+  <script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
   <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 
