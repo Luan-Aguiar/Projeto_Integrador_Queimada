@@ -158,6 +158,8 @@ populateCountries();
 
 // Função para renderizar o gráfico de pizza
 function refreshCardPieChart(arrayPie) {
+  const divGrafico = document.getElementById('grafico');
+  divGrafico.innerHTML += `<div id="chartDiv" style="height: 500px;"></div>`;
   var chart = JSC.chart('chartDiv', {
     debug: false,
     legend_position: 'inside  bottom',
