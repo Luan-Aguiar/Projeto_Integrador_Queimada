@@ -6,10 +6,10 @@ async function populateCountries() {
     'http://queimadas.dgi.inpe.br/queimadas/dados-abertos/api/focos/count';
   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
-  tableOfCountries = document.querySelector('#tableOfCountries tbody');
+  loading = document.querySelector('#tableOfCountries');
 
   let loader = `
-  <div class="d-flex justify-content-center mt-5">
+  <div id="loading">
     <div class="loader"></div>
   </div>
   `;
@@ -23,7 +23,17 @@ async function populateCountries() {
   });
 
   let index = 1;
-  let paises = '';
+  let paises = `
+    <thead>
+      <tr>
+        <th scope="col">Ranking</th>
+        <th scope="col">País</th>
+        <th scope="col">Total de Casos</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: center;">
+    </tbody>
+  `;
 
   keysSorted.forEach((key) => {
     paises += `
