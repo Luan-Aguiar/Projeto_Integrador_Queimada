@@ -1,10 +1,19 @@
-// Função que pega os países da américa do sul, e popula a tabela
+/*
+ *  Essa função obtem dados da API do INPE
+ */
 async function populateCountries() {
-  const tableOfCountries = document.querySelector("#tableOfCountries tbody");
-
   const url =
-    "http://queimadas.dgi.inpe.br/queimadas/dados-abertos/api/focos/count";
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    'http://queimadas.dgi.inpe.br/queimadas/dados-abertos/api/focos/count';
+  const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+
+  tableOfCountries = document.querySelector('#tableOfCountries tbody');
+
+  let loader = `
+  <div class="d-flex justify-content-center mt-5">
+    <div class="loader"></div>
+  </div>
+  `;
+  tableOfCountries.innerHTML = loader;
 
   const response = await fetch(proxyurl + url);
   const result = await response.json();
@@ -14,16 +23,20 @@ async function populateCountries() {
   });
 
   let index = 1;
+  let paises = '';
 
   keysSorted.forEach((key) => {
-    tableOfCountries.innerHTML += `
+    paises += `
     <tr>
       <td>${index++}</td>
       <td>${key}</td>
       <td>${result[key]}</td>
     </tr>
     `;
+    tableOfCountries.innerHTML = paises;
   });
+
+  // Soma o total de casos e passa como parametro na função refreshCardTotalFires
 
   let totalFires = 0;
 
@@ -32,19 +45,60 @@ async function populateCountries() {
   });
 
   refreshCardTotalFires(totalFires);
+
+  // -----------------------------------------------------------------------------
+
+  // Verifica o país com maior indice e passsa como parametro na função refreshCardCoutryMax
+  let countryMaxFires = '';
+
+  keysSorted.forEach((key) => {
+    if (countryMaxFires <= result[key]) {
+      countryMaxFires += key;
+      countryMaxFires += ` - ${result[key]}`;
+    }
+  });
+
+  refreshCardCoutryMax(countryMaxFires);
+  // -----------------------------------------------------------------------------
+
+  // Verifica o país com maior indice e passsa como parametro na função refreshCardCoutryMax
+  let countryMinFires = '';
+
+  keysSorted.forEach((key) => {
+    if (countryMinFires !== result[key]) {
+      countryMinFires = key;
+      countryMinFires += ` - ${result[key]}`;
+    }
+  });
+
+  refreshCardCoutryMin(countryMinFires);
+  // -----------------------------------------------------------------------------
 }
 
-// Function that refresh card with total fires in Sul America
-
+// Função para atualizar o card com total de incêndios
 function refreshCardTotalFires(totalFires) {
-  const cardTotalFires = document.getElementById("totalFires");
-  cardTotalFires.innerHTML = `
-  ${totalFires}`;
+  const cardTotalFires = document.getElementById('totalFires');
+  cardTotalFires.innerHTML = `${totalFires}`;
 }
 
+// Função para atualizar o card com o país da maior quantidade de incêndios
+function refreshCardCoutryMax(countryMaxFires) {
+  const cardCountryMaxFires = document.getElementById('countryMaxFires');
+  cardCountryMaxFires.innerHTML = `${countryMaxFires}`;
+}
+
+// Função para atualizar o card com o país da menor quantidade de incêndios
+function refreshCardCoutryMin(countryMinFires) {
+  const cardCountryMinFires = document.getElementById('countryMinFires');
+  cardCountryMinFires.innerHTML = `${countryMinFires}`;
+}
+
+// Chamando a função que obtém os dados da API e renderiza
 populateCountries();
 
-$("#sidebarCollapse").on("click", function () {
-  $("#sidebar").toggleClass("active");
-  $(this).toggleClass("active");
+// JQuery of the Bootstrap, to sidebar menu open and close.
+
+$('#sidebarCollapse').on('click', function () {
+  $('#sidebar').toggleClass('active');
+  $(this).toggleClass('active');
 });

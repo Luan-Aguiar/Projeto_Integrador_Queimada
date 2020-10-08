@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-
 </head>
 
 <body>
@@ -41,25 +40,23 @@
     </nav>
 
     <!-- Page Content  -->
+
     <div id="content">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid container-navbar-btn col-sm">
+        <div class="container-fluid container-navbar-btn col-sm d-flex justify-content-between">
           <button type="button" id="sidebarCollapse" class="navbar-btn">
             <span></span>
             <span></span>
             <span></span>
           </button>
         </div>
-        <div id="titulo-pagina" class="col-sm">
-          Queimadas América do Sul
-        </div>
-        <div class="col-sm"></div>
+        <span id="titulo-pagina" class="mr-3">Queimadas América do Sul</span>
+
       </nav>
 
-      <div class="row">
-
+      <div id="table" class="row">
         <div class="col-12 col-lg-9">
-          <table style="text-align: center;" class="table table-striped" id="tableOfCountries">
+          <table class="table table-striped" id="tableOfCountries" style="text-align: center;">
             <thead>
               <tr>
                 <th scope="col">Ranking</th>
@@ -71,24 +68,38 @@
             </tbody>
           </table>
         </div>
-        <div class="col-12 col-lg-3">
+
+        <div id="cards" class="col">
           <div class="card text-white bg-danger">
             <div class="card-header">Total America do Sul</div>
             <div class="card-body d-flex justify-content-between align-center">
               <h3 class="align-text-bottom" id="totalFires"></h3>
-              <i class="fas fa-align-right mt-2"></i>
             </div>
           </div>
-          <div class="card text-white bg-primary mt-3">
-            <div class="card-header">Casos Novos</div>
+
+          <div class="card text-white bg-warning mt-3">
+            <div class="card-header">País com maior índice</div>
             <div class="card-body d-flex justify-content-between align-center">
-              <h3 class="align-text-bottom">500</h3>
-              <i class="fas fa-flag"></i>
+              <h3 class="align-text-bottom" id="countryMaxFires"></h3>
+            </div>
+          </div>
+
+          <div class="card text-white bg-success mt-3">
+            <div class="card-header">País com menor índice</div>
+            <div class="card-body d-flex justify-content-between align-center">
+              <h3 class="align-text-bottom" id="countryMinFires"></h3>
             </div>
           </div>
         </div>
+
       </div>
-      <!-- <div class="row">
+
+    </div>
+
+
+
+
+    <!-- <div class="row">
 
         <div class="card col-12 col-lg-6 cartoes">
           <div class="card-header">
@@ -125,7 +136,7 @@
         </div>
 
       </div> -->
-    </div>
+  </div>
   </div>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -139,7 +150,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
 
   <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
