@@ -18,7 +18,7 @@ async function populateCountries() {
   const response = await fetch(proxyurl + url);
   const result = await response.json();
 
-  keysSorted = Object.keys(result).sort(function (a, b) {
+  resultSorted = Object.keys(result).sort(function (a, b) {
     return result[b] - result[a];
   });
 
@@ -35,7 +35,7 @@ async function populateCountries() {
     </tbody>
   `;
 
-  keysSorted.forEach((key) => {
+  resultSorted.forEach((key) => {
     paises += `
     <tr>
       <td>${index++}</td>
@@ -50,7 +50,7 @@ async function populateCountries() {
 
   let totalFires = 0;
 
-  keysSorted.forEach((key) => {
+  resultSorted.forEach((key) => {
     totalFires += result[key];
   });
 
@@ -61,10 +61,10 @@ async function populateCountries() {
   // Verifica o país com maior indice e passsa como parametro na função refreshCardCoutryMax
   let countryMaxFires = '';
 
-  keysSorted.forEach((key) => {
+  resultSorted.forEach((key) => {
     if (countryMaxFires <= result[key]) {
       countryMaxFires += key;
-      countryMaxFires += ` - ${result[key]}`;
+      countryMaxFires += `<span class="separador"> | </span>${result[key]}`;
     }
   });
 
@@ -74,15 +74,26 @@ async function populateCountries() {
   // Verifica o país com maior indice e passsa como parametro na função refreshCardCoutryMax
   let countryMinFires = '';
 
-  keysSorted.forEach((key) => {
+  resultSorted.forEach((key) => {
     if (countryMinFires !== result[key]) {
       countryMinFires = key;
-      countryMinFires += ` - ${result[key]}`;
+      countryMinFires += `<span class="separador"> | </span>${result[key]}`;
     }
   });
 
   refreshCardCoutryMin(countryMinFires);
   // -----------------------------------------------------------------------------
+
+  // popula dados dentro de uma variavel com array;
+  let keysChartJS = [];
+  let valueChartJS = [];
+
+  resultSorted.forEach((key) => {
+    keysChartJS.push(key);
+    valueChartJS.push(key);
+  });
+
+  receiveDataForChartJS(result);
 }
 
 // Função para atualizar o card com total de incêndios
@@ -112,3 +123,5 @@ $('#sidebarCollapse').on('click', function () {
   $('#sidebar').toggleClass('active');
   $(this).toggleClass('active');
 });
+
+

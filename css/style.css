@@ -291,3 +291,7 @@ div#loading {
     transform: rotate(360deg);
   }
 }
+
+span.separador {
+  color: #ffffff70;
+}
