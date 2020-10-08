@@ -82,6 +82,12 @@ a:focus {
     margin-right: auto;
 }
 
+.dados p{
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -228,6 +234,23 @@ footer div img {
 }
 .img-nao-existe {
     display: none;
+}
+/* ---------------------------------------------------
+    INFO PAGE
+----------------------------------------------------- */
+.card img {
+    width: 20px;
+}
+.fb-eco {
+    width: 400px;
+}
+
+.card button {
+    font-size: .9em;
+    width: 250px;
+}
+.card {
+    text-align: center;
 }
 
 /* ---------------------------------------------------

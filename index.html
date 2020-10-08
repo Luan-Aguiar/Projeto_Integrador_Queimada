@@ -16,10 +16,10 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
         integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
-    </script>
+        </script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
-    </script>
+        </script>
 
 </head>
 
@@ -29,17 +29,18 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Monitoramento de Queimadas</h3>
+                <h3>Queimadas</h3>
             </div>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#" id="active-item">Brasil</a>
+                    <a href="index.html" id="active-item">Bem-vindo</a>
                 </li>
                 <li>
-                    <a href="#">Estados</a>
+                    <a href="#">Dados América do Sul</a>
                 </li>
                 <li>
-                    <a href="#">Informações</a>
+
+                    <a href="info.html">Informações</a>
                 </li>
                 <li>
                     <a href="#">Contato</a>
@@ -57,118 +58,23 @@
                         <span></span>
                     </button>
                 </div>
-                <div id="titulo-pagina" class="mx-auto">Monitoramento Brasil</div>
+                <div id="titulo-pagina" class="mx-auto">Monitoramento de Queimadas</div>
             </nav>
 
             <!-- fonte da imagem http://www.ms.gov.br/confira-o-mapa-do-inpe-sobre-queimadas-em-ms/-->
             <div class="mapa">
 
                 <div class="imagem">
-                    <img src="inpe3.jpg">
+                    <img id="nasa" src="">
                 </div>
 
                 <div class="dados">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Estado</th>
-                                <th scope="col">Ocorrências</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Tocantins</td>
-                                <td>1023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>Piauí</td>
-                                <td>945</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td>Mato Grosso</td>
-                                <td>839</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>
+                        Acompanhe as dados e notícias sobre eventos que queimada que estão ocorrendo ao redor do mundo.
+                        <br><br>
+                        Os dados são retirados da API provida pelo Programa Queimadas do INPE, que disponibiliza dados
+                        atualizados sobre os focos de queimada no Brasil assim como outros países.
+                    </p>
                 </div>
 
             </div>
@@ -192,15 +98,15 @@
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Popper.JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Scripts customizados -->
     <script src="js/scripts.js"></script>
 
