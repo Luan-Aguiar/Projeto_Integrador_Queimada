@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitoramento de Queimadas</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+        </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Monitoramento de Queimadas</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+
+                    <a href="#" id="active-item">Brasil</a>
+                </li>
+                <li>
+                    <a href="#">Estados</a>
+                </li>
+                <li>
+
+                    <a href="info.html">Informações</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+                <div>
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div id="titulo-pagina" class="mx-auto">Monitoramento Brasil</div>
+            </nav>
+
+            <!-- fonte da imagem http://www.ms.gov.br/confira-o-mapa-do-inpe-sobre-queimadas-em-ms/-->
+            <div class="mapa">
+
+                <div class="imagem">
+                    <img src="inpe3.jpg">
+                </div>
+
+                <div class="dados">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Ocorrências</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Tocantins</td>
+                                <td>1023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Piauí</td>
+                                <td>945</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Mato Grosso</td>
+                                <td>839</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <footer id="quadro-noticias" style="display: none;">
+                <div id='info-noticia'>
+                    <article>
+                        <p id='noticia'>
+                            <a id='titulo-noticia' href="#" target="_blank"></a>
+                        </p>
+                        <p><cite><span id="fonte-noticia"></span> - <span id="data-noticia"></span></cite></p>
+                    </article>
+                </div>
+                <div class="img-noticia" id="img-noticia">
+                    <img src="" alt="Imagem ilustrativa da notícia">
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <!-- Popper.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+    <!-- Scripts customizados -->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
