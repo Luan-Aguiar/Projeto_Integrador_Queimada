@@ -82,6 +82,12 @@ a:focus {
     margin-right: auto;
 }
 
+.dados p{
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */

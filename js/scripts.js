@@ -10,8 +10,24 @@ $(document).ready(function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+    buscaMapa();
     buscaNoticias();
 });
+
+function buscaMapa(){
+    let url = "https://firms.modaps.eosdis.nasa.gov/wms/key/c6f3c880af95a382adcec66f09a89955/?REQUEST=GetMap&layers=fires_viirs_24&WIDTH=1024&HEIGHT=512&BBOX=-180,-90,180,90"
+    let imagem = document.querySelector('#nasa')
+    fetch(url)
+  .then(res=>{return res.blob()})
+  .then(blob=>{
+    var img = URL.createObjectURL(blob);
+    // Do whatever with the img
+    imagem.setAttribute('src', img);
+  })
+  .catch(error => {
+    console.log('Erro buscando mapa: ' + error);
+});
+}
 
 function buscaNoticias() {
     for (let pag = 1; pag < 4; pag++) {
