@@ -27,6 +27,7 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: var(--cor-fonte);
+    text-align: center;
 }
 
 a,

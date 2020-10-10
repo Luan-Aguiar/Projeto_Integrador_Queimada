@@ -1,11 +1,3 @@
-// JQuery para uso do Bootstrap, menu sidebar
-$(document).ready(function () {
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar').toggleClass('active');
-    $(this).toggleClass('active');
-  });
-});
-
 // Obter dados da API e enviar para as funções de atualização da DOM
 async function populateCountries() {
   const url =
