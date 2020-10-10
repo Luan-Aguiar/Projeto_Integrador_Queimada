@@ -1,5 +1,5 @@
 # Projeto Integrador: Monitoramento de Queimadas
-# Front End Coding Facebook Turma06 - *by Digital House*
+# Front End Coding Facebook Turma 06 - *by Digital House*
 
 ## Desenvolvedores:
 - Daniel Oliveira
