@@ -6,7 +6,7 @@
 
 - [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/16/linkedin-icon.png "LinkedIn")](https://www.linkedin.com/in/) [![LinkedIn](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/github-icon.png "GitHub")](https://github.com/) Evandro Rocha
 
-- [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/16/linkedin-icon.png "LinkedIn")](https://www.linkedin.com/in/) [![LinkedIn](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/github-icon.png "GitHub")](https://github.com/) Gabriel Mareco
+- [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/16/linkedin-icon.png "LinkedIn")](https://www.linkedin.com/in/gabriel-souto-416b731ab/) [![LinkedIn](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/github-icon.png "GitHub")](https://github.com/gabrielmbs) Gabriel Mareco
 
 - [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/16/linkedin-icon.png "LinkedIn")](https://www.linkedin.com/in/) [![LinkedIn](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/github-icon.png "GitHub")](https://github.com/) Gustavo Goulart
 
