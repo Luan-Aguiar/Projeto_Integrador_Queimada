@@ -317,3 +317,18 @@ td {
 tr:hover {
     background-color: #eee;
 }
+
+#btn-primary {
+    bottom: 2px;
+}
+
+#col-contato {
+    margin-bottom: 5px;
+}
+
+#container-card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/
