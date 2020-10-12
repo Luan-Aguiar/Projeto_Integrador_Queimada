@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 :root {
     --cor-fundo: #f2f3f9;
     --cor-sombra: #b4c2e3;
@@ -60,6 +59,7 @@ a:focus {
     margin: 40px 0;
 }
 
+
 /*----------------------------------------------------
     CENTER CONTENT STYLE
 ------------------------------------------------------ */
@@ -83,11 +83,12 @@ a:focus {
     margin-right: auto;
 }
 
-.dados p{
+.dados p {
     display: block;
     text-align: center;
     word-wrap: break-word;
 }
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -136,9 +137,11 @@ nav ul li a {
     background: var(--cor-fundo-menu-selecionado);
 }
 
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+
 #content {
     width: 100%;
     padding: 20px;
@@ -233,15 +236,20 @@ footer div img {
 .img-existe {
     display: block;
 }
+
 .img-nao-existe {
     display: none;
 }
+
+
 /* ---------------------------------------------------
     INFO PAGE
 ----------------------------------------------------- */
+
 .card img {
     width: 20px;
 }
+
 .fb-eco {
     width: 400px;
 }
@@ -250,13 +258,16 @@ footer div img {
     font-size: .9em;
     width: 250px;
 }
+
 .card {
     text-align: center;
 }
 
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
+
 @media (max-width: 425px) {
     #img-noticia img {
         display: none;
@@ -268,12 +279,10 @@ footer div img {
         margin-left: -250px;
         transform: rotateY(90deg);
     }
-
     #sidebar.active {
         margin-left: 0;
         transform: none;
     }
-
     #sidebarCollapse span:first-of-type,
     #sidebarCollapse span:nth-of-type(2),
     #sidebarCollapse span:last-of-type {
@@ -281,20 +290,49 @@ footer div img {
         opacity: 1;
         margin: 5px auto;
     }
-
     #sidebarCollapse.active span {
         margin: 0 auto;
     }
-
     #sidebarCollapse.active span:first-of-type {
         transform: rotate(45deg) translate(2px, 2px);
     }
-
     #sidebarCollapse.active span:nth-of-type(2) {
         opacity: 0;
     }
-
     #sidebarCollapse.active span:last-of-type {
         transform: rotate(-45deg) translate(1px, -1px);
     }
+}
+
+
+/* CONTATO */
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+.btn-primary {
+    display: block;
+}
+
+.col-contato {
+    margin-bottom: 5px;
+}
+
+#container-card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2.title-contact {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
 }
