@@ -4,20 +4,33 @@ async function populateCountries() {
     'http://queimadas.dgi.inpe.br/queimadas/dados-abertos/api/focos/count';
   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
-  loading = document.querySelector('#tableOfCountries');
+  let loading = document.getElementById('tableOfCountries');
+
+  // auxiliar no loading
+  let afterLoading = document.getElementById('afterLoading');
 
   let loader = `
-  <div id="loading">
-    <div class="loader"></div>
-  </div>
+    <div id="loading" class="d-flex justify-content-center col-12 col-lg-12 col-sm-12">
+      <div class="loader"></div>
+    </div>
   `;
-  tableOfCountries.innerHTML = loader;
+
+  loading.innerHTML = loader;
 
   const response = await fetch(proxyurl + url);
   const result = await response.json();
 
   resultSorted = Object.keys(result).sort(function (a, b) {
     return result[b] - result[a];
+  });
+
+
+  // após carreagamento da API, a div afterloading tem a classe col-lg-12 alterado para 9
+  // para que os cards fiquem ao lado da tabela
+  afterLoading.classList.forEach((item) =>{
+    if(item === 'col-lg-12'){
+      afterLoading.classList.replace('col-lg-12', 'col-lg-9');
+    }
   });
 
   let index = 1;
@@ -41,7 +54,7 @@ async function populateCountries() {
       <td>${result[key]}</td>
     </tr>
     `;
-    tableOfCountries.innerHTML = paises;
+    loading.innerHTML = paises;
   });
 
   // Soma o total de casos e passa como parametro na função refreshCardTotalFires
@@ -112,8 +125,8 @@ function refreshCardTotalFires(totalFires) {
   divCards.innerHTML += `
     <div class="card text-white bg-danger">
       <div class="card-header">Total</div>
-      <div class="card-body d-flex justify-content-between align-center">
-        <h3 class="align-text-bottom" id="totalFires">${totalFires}</h3>
+      <div class="card-body d-flex justify-content-between">
+        <h4 class="align-text-bottom" id="totalFires">${totalFires}</h4>
       </div>
     </div>
 `;
@@ -125,8 +138,8 @@ function refreshCardCoutryMax(countryMaxFires) {
   divCards.innerHTML += `
     <div class="card text-white bg-warning mt-3">
       <div class="card-header">Maior índice</div>
-      <div class="card-body d-flex justify-content-between align-center">
-        <h3 class="align-text-bottom" id="countryMaxFires">${countryMaxFires}</h3>
+      <div class="card-body d-flex justify-content-between">
+        <h4 class="align-text-bottom" id="countryMaxFires">${countryMaxFires}</h4>
       </div>
     </div>
   `;
@@ -138,8 +151,8 @@ function refreshCardCoutryMin(countryMinFires) {
   divCards.innerHTML += `
     <div class="card text-white bg-success mt-3">
       <div class="card-header">Menor índice</div>
-      <div class="card-body d-flex justify-content-between align-center">
-        <h3 class="align-text-bottom" id="countryMinFires">${countryMinFires}</h3>
+      <div class="card-body d-flex justify-content-between">
+        <h4 class="align-text-bottom" id="countryMinFires">${countryMinFires}</h4>
       </div>
     </div>
   `;
