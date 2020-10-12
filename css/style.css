@@ -318,11 +318,11 @@ tr:hover {
     background-color: #eee;
 }
 
-#btn-primary {
-    bottom: 2px;
+.btn-primary {
+    display: block;
 }
 
-#col-contato {
+.col-contato {
     margin-bottom: 5px;
 }
 
@@ -331,4 +331,8 @@ tr:hover {
     padding-bottom: 10px;
 }
 
-/
+h2.title-contact {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
