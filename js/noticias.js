@@ -9,13 +9,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function buscaMapa() {
     let url = "https://firms.modaps.eosdis.nasa.gov/wms/key/c6f3c880af95a382adcec66f09a89955/?REQUEST=GetMap&layers=fires_viirs_24&WIDTH=1024&HEIGHT=512&BBOX=-180,-90,180,90"
-    let imagem = document.querySelector('#nasa')
+    //let imagem = document.querySelector('#nasa')
+
+    let caixa = document.querySelector('.imagem')
+    let loader = `
+    <div id="loading" class="d-flex justify-content-center col-12 col-lg-12 col-sm-12">
+      <div class="loader"></div>
+    </div>
+  `;
+
+    caixa.innerHTML = loader
+
     fetch(url)
         .then(res => { return res.blob() })
         .then(blob => {
             var img = URL.createObjectURL(blob);
-            // Do whatever with the img
-            imagem.setAttribute('src', img);
+            //imagem.setAttribute('src', img);
+            caixa.innerHTML = `
+            <img id="nasa" src=${img}>
+            `;
         })
         .catch(error => {
             console.log('Erro buscando mapa: ' + error);
