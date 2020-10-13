@@ -9,6 +9,7 @@
 
 <p align="center"> Projeto de conclusão do curso da turma 6.
     <br>
+  Live Preview: https://monitoramento-queimadas.netlify.app/
 </p>
 
 ## 📝 Sumário
