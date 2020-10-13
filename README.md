@@ -27,7 +27,7 @@ Em desenvolvimento...
 - [Bootstrap](https://getbootstrap.com/) - Interface 
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript) - Interação
 - [CSS](https://www.w3schools.com/css/) - Design
-- [HTML](https://nodejs.org/en/) - Estrutura
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Estrutura
 
 ## ✍️ Desenvolvedores <a name = "desenvolvedores"></a>
 
