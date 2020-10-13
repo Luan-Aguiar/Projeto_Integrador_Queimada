@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitoramento de Queimadas</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Monitoramento de Queimadas</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="./index.html">Bem-vindo</a>
+                </li>
+                <li>
+                    <a href="./paises.html">Dados América do Sul</a>
+                </li>
+                <li>
+
+                    <a href="./info.html">Informações</a>
+                </li>
+                <li>
+                    <a href="#" id="active-item">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+                <div>
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div id="titulo-pagina" class="mx-auto">Monitoramento de Queimadas</div>
+            </nav>
+            <!-- CANAIS DE DENUNCIA -->
+            <h2 class="title-contact">Canais de denúncia</h2>
+            <div class="row">
+                <div class="col-lg-3 col-contato">
+                    <div class="card h-100" style="width:100%">
+                        <img class="card-img-top" src="img/ibama-logo.jpg" alt="IBAMA" style="width:100%">
+                        <div class="container container-card">
+                            <h4><b>IBAMA</b></h4>
+                            <p class="card-text">Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis.</p>
+                            <p style="font-size:small; font-style: italic">*Vinculado ao Ministério do Meio Ambiente.</p>
+                        </div>
+                    </div>
+                    <a href="https://www.gov.br/ibama/pt-br/canais_atendimento/fale-conosco#ouvidoria" id="btn-primary" class="btn btn-primary">Denuncie</a>
+                </div>
+                <div class="col-lg-3 col-contato">
+                    <div class="card h-100" style="width:100%">
+                        <img class="card-img-top" src="img/icmbio.jpg" alt="ICMBIO" style="width:100%">
+                        <div class="container container-card">
+                            <h4><b>ICMBIO</b></h4>
+                            <p class="card-text">Instituto Chico Mendes de Conservação da Biodiversidade.</p>
+                            <p style="font-size:small; font-style: italic">*Vinculado ao Ministério do Meio Ambiente.</p>
+                        </div>
+                    </div>
+                    <a href="https://falabr.cgu.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?idFormulario=4&tipo=1&origem=idp&modo=" class="btn btn-primary mt-auto" id="btn-primary">Denuncie</a>
+                </div>
+                <div class="col-lg-3 col-contato">
+                    <div class="card h-100" style="width:100%">
+                        <img class="card-img-top" src="img/bombeiro.jpg" alt="Corpo de Bombeiros" style="width:100%">
+                        <div class="container container-card">
+                            <h4><b>Corpo de Bombeiros</b></h4>
+                            <p class="card-text">Canal telefônico.</p><br>
+                        </div>
+                        <a href="tel:193"><i class="material-icons" style="font-size:48px;color: green;">phone</i></a><br>
+                        <a href="tel:193"> <span style=" font-size: xx-large; color: green;"> 193</a></span> </div>
+                    <a href="tel:193" class="btn btn-primary" id="btn-primary disabled">Denuncie</a>
+                </div>
+
+                <div class="col-lg-3 col-contato">
+                    <div class="card h-100" style="width:100%">
+                        <img class="card-img-top" src="img/civil.jpg" alt="Polícia Civil" style="width:100%">
+                        <div class="container container-card">
+                            <h4><b>Polícia Civil</b></h4>
+                            <p class="card-text">Canal telefônico.</p><br>
+                        </div>
+                        <a href="tel:147"><i class="material-icons" style="font-size:48px;color: green;">phone</i></a><br>
+                        <a href="tel:147"> <span style=" font-size: xx-large; color: green;"> 147</a></span> </div>
+                    <a href="tel:147" class="btn btn-primary" id="btn-primary disabled">Denuncie</a>
+                </div>
+                <div class="line "></div>
+                <!-- ONGS -->
+                <h2 class="title-contact">ONGs de proteção ambiental</h2><br>
+                <div class="row">
+                    <div class="col-lg-3 col-contato">
+                        <div class="card h-100" style="width:100%">
+                            <img class="card-img-top" src="img/greenpeace.jpg" alt="Greenpeace" style="width:100%">
+                            <div class="container container-card">
+                                <h4><b>Greenpeace Brasil</b></h4>
+                                <p class="card-text">Preservação ambiental e desenvolvimento sustentável.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.greenpeace.org/brasil/" class="btn btn-primary" id="btn-primary">Saiba mais</a>
+                    </div>
+                    <div class="col-lg-3 col-contato">
+                        <div class="card h-100" style="width:100%">
+                            <img class="card-img-top" src="img/panthera.jpg" alt="Panthera" style="width:100%">
+                            <div class="container container-card">
+                                <h4><b>Panthera Brasil</b></h4>
+                                <p class="card-text">Ong de proteção a felinos selvagens.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.panthera.org/" class="btn btn-primary" id="btn-primary">Saiba mais</a>
+                    </div>
+                    <div class="col-lg-3 col-contato">
+                        <div class="card h-100" style="width:100%">
+                            <img class="card-img-top" src="img/ampara.jpg" alt="Ampara Animal" style="width:100%">
+                            <div class="container container-card">
+                                <h4><b>Ampara Animal</b></h4>
+                                <p class="card-text">Ong de proteção a felinos selvagens.</p>
+                            </div>
+                        </div>
+                        <a href="https://amparanimal.org.br/" class="btn btn-primary" id="btn-primary">Saiba mais</a>
+                    </div>
+                    <div class="col-lg-3 col-contato">
+                        <div class="card h-100" style="width:100%">
+                            <img class="card-img-top" src="img/imaflora.jpg" alt="Imaflora" style="width:100%">
+                            <div class="container container-card">
+                                <h4><b>Imaflora</b></h4>
+                                <p class="card-text">Conservação e o uso sustentável dos recursos naturais.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.imaflora.org/" class="btn btn-primary" id="btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="line "></div>
+                <h2 class="title-contact">Secretarias estaduais de meio ambiente</h2>
+                <div class="table-responsive " style="background-color: #fff; ">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th style="font-size: large">Estado</th>
+                                <th style="font-size: large">Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC</td>
+                                <td>
+                                    <a href="tel:6832233090"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6832233090"> <span style=" font-size: 18px; color: black;"> (68)3223-3090</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AL</td>
+                                <td>
+                                    <a href="tel:8233152680"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8233152680"> <span style=" font-size: 18px; color: black;"> (82)3315-2680</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AM</td>
+                                <td>
+                                    <a href="tel:9236424724"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:923642-724"> <span style=" font-size: 18px; color: black;"> (92)3642-4724</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AP</td>
+                                <td>
+                                    <a href="tel:9632125310"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:9632125310"> <span style=" font-size: 18px; color: black;"> (96)3212-5310</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BA</td>
+                                <td>
+                                    <a href="tel:7131156288"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:7131156288"> <span style=" font-size: 18px; color: black;"> (71)3115-6288</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CE</td>
+                                <td>
+                                    <a href="tel:8531015520"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8531015520"> <span style=" font-size: 18px; color: black;"> (85)3101-5520</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DF</td>
+                                <td>
+                                    <a href="tel:6133558060"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6133558060"> <span style=" font-size: 18px; color: black;"> (61) 3355-8060</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ES</td>
+                                <td>
+                                    <a href="tel:2731363441"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:2731363441"> <span style=" font-size: 18px; color: black;"> (27) 3136-3441</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GO</td>
+                                <td>
+                                    <a href="tel:6232015150"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6232015150"> <span style=" font-size: 18px; color: black;"> (62) 3201-5150</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MA</td>
+                                <td>
+                                    <a href="tel:9832188956"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:9832188956"> <span style=" font-size: 18px; color: black;"> (98) 3218-8956</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MG</td>
+                                <td>
+                                    <a href="tel:3139151299"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:3139151299"> <span style=" font-size: 18px; color: black;"> (31) 3915-1299</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MS</td>
+                                <td>
+                                    <a href="tel:6733184100"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6733184100"> <span style=" font-size: 18px; color: black;"> (67) 3318-4100</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MT</td>
+                                <td>
+                                    <a href="tel:6536137200"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6536137200"> <span style=" font-size: 18px; color: black;"> (65) 3613-7200</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PA</td>
+                                <td>
+                                    <a href="tel:9131843349"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:9131843349"> <span style=" font-size: 18px; color: black;"> (91) 3184-3349</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PB</td>
+                                <td>
+                                    <a href="tel:8332185661"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8332185661"> <span style=" font-size: 18px; color: black;"> (83) 3218-5661</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PE</td>
+                                <td>
+                                    <a href="tel:8131811700"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8131811700"> <span style=" font-size: 18px; color: black;"> (81) 3181-1700</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PI</td>
+                                <td>
+                                    <a href="tel:8632162038"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8632162038"> <span style=" font-size: 18px; color: black;"> (86) 3216-2038</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PR</td>
+                                <td>
+                                    <a href="tel:4133047700"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:4133047700"> <span style=" font-size: 18px; color: black;"> (41) 3304-7700</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RJ</td>
+                                <td>
+                                    <a href="tel:2123345906"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:2123345906"> <span style=" font-size: 18px; color: black;"> (21) 2334-5906</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RN</td>
+                                <td>
+                                    <a href="tel:8432322400"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:8432322400"> <span style=" font-size: 18px; color: black;"> (84) 3232-2400</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RO</td>
+                                <td>
+                                    <a href="tel:6932161065"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6932161065"> <span style=" font-size: 18px; color: black;"> (69) 3216-1065</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RR</td>
+                                <td>
+                                    <a href="tel:9521219176"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:9521219176"> <span style=" font-size: 18px; color: black;"> (95) 2121-9176</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RS</td>
+                                <td>
+                                    <a href="tel:5132888100"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:5132888100"> <span style=" font-size: 18px; color: black;"> (51) 3288-8100</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SC</td>
+                                <td>
+                                    <a href="tel:4830299014"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:4830299014"> <span style=" font-size: 18px; color: black;"> (48) 3029-9014</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SE</td>
+                                <td>
+                                    <a href="tel:7931797310"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:7931797310"> <span style=" font-size: 18px; color: black;"> (79) 3179-7310</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP</td>
+                                <td>
+                                    <a href="tel:1131333000"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:1131333000"> <span style=" font-size: 18px; color: black;"> (11) 3133-3000</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TO</td>
+                                <td>
+                                    <a href="tel:6332182600"><i class="material-icons" style="font-size:18px;color: black;">phone </i></a>
+                                    <a href="tel:6332182600"> <span style=" font-size: 18px; color: black;"> (63) 3218-2600</a></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- jQuery CDN - Slim version (=without AJAX) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ " crossorigin="anonymous "></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm " crossorigin="anonymous "></script>
+            <!-- jQuery Custom Scroller CDN -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js "></script>
+
+            <script type="text/javascript ">
+                $(document).ready(function() {
+                    $("#sidebar ").mCustomScrollbar({
+                        theme: "minimal "
+                    });
+
+                    $('#sidebarCollapse').on('click', function() {
+                        $('#sidebar, #content').toggleClass('active');
+                        $('.collapse.in').toggleClass('in');
+                        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    });
+                });
+            </script>
+</body>
+
+</html>
