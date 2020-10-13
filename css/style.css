@@ -89,15 +89,14 @@ a:focus {
     word-wrap: break-word;
 }
 
-
 div#loading {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
     align-content: center;
-  }
-  
+}
+
 .loader {
     width: 120px;
     height: 120px;
@@ -108,16 +107,18 @@ div#loading {
     border-radius: 50%;
     -webkit-animation: 1s spin linear infinite;
     animation: 1s spin linear infinite;
-  }
+}
 
-  @keyframes spin {
+@keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -348,6 +349,7 @@ tr:hover {
 
 .btn-primary {
     display: block;
+    padding-bottom: 5px;
 }
 
 .col-contato {
@@ -363,4 +365,8 @@ h2.title-contact {
     margin: 0 auto;
     margin-bottom: 15px;
     text-align: center;
+}
+
+.col-lg-3 {
+    padding-bottom: 50px;
 }
